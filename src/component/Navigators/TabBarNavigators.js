@@ -2,8 +2,8 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MovieContainer from "../containers/MovieContainer";
-import MovieSearch from "../containers/MovieSearch";
+import Movies from "../containers/Movies";
+import SearchMovies from "../containers/SearchMovies";
 // import TVshows from "../containers/TV-shows";
 
 const Tab = createMaterialTopTabNavigator();
@@ -22,13 +22,13 @@ function MyTabs() {
       }}
     >
       <Tab.Screen
-        name="MovieContainer"
-        component={MovieContainer}
+        name="Movies"
+        component={Movies}
         options={{ tabBarLabel: "Movies" }}
       />
       <Tab.Screen
-        name="MovieSearch"
-        component={MovieSearch}
+        name="SearchMovies"
+        component={SearchMovies}
         options={{ tabBarLabel: "Search Movie" }}
       />
       {/* <Tab.Screen
