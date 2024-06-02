@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Text } from "react-native";
+import { GluestackUIProvider, Box } from "@gluestack-ui/themed";
+import { config } from "@gluestack-ui/config";
+import axios from "axios";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import Header from "./src/component/layout/Header";
+// import RecipyContainer from "./src/component/containers/MovieContainer";
+// import Form from "./src/component/forms/SearchForm";
+import { NavigationContainer } from "@react-navigation/native";
+import TabBarNavigation from "./src/component/Navigators/TabBarNavigators";
+// import { createStackNavigator } from "@react-navigation/stack";
 
-export default function App() {
+// const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <GluestackUIProvider config={config}>
+        <Header />
+        {/* <RecipyContainer /> */}
+        <TabBarNavigation />
+        <StatusBar bg="blue" />
+      </GluestackUIProvider>
+    </SafeAreaProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
