@@ -14,7 +14,7 @@ const Header = () => {
         py={5}
       >
         <Text color="white" fontSize={20} fontWeight="bold">
-          Movie App
+          MOFE and ADE movie App
         </Text>
       </Box>
     </SafeAreaView>

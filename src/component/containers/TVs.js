@@ -6,7 +6,7 @@ import Loading from "../layout/Loading";
 import MoviesList from "../Lists/MoviesList";
 
 const TVs = ({ navigation }) => {
-  const [category, setCategory] = useState("airing_today");
+  const [category, setCategory] = useState("now_playing");
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
 
@@ -27,6 +27,10 @@ const TVs = ({ navigation }) => {
 
   const handleInputChange = (selectedCategory) => {
     setCategory(selectedCategory);
+  };
+
+  const handleSubmit = () => {
+    fetchMovies();
   };
 
   return (

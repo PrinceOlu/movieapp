@@ -23,7 +23,7 @@ function MyTabs() {
     >
       <Tab.Screen
         name="Movies"
-        component={MoviesStack} // Use MoviesStack here
+        component={MoviesStack}
         options={{ tabBarLabel: "Movies" }}
       />
       <Tab.Screen
@@ -32,7 +32,7 @@ function MyTabs() {
         options={{ tabBarLabel: "Search Movie" }}
       />
       <Tab.Screen
-        name="TVs"
+        name="TV"
         component={TVs}
         options={{ tabBarLabel: "TV Shows" }}
       />
