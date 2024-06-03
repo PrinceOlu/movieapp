@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Center } from "@gluestack-ui/themed";
 import SearchForm from "../forms/SearchForm";
-import { getMoviesByQuery } from "../../services/api"; // Import the getMoviesByQuery function
+import { getMoviesByQuery } from "../../services/api";
 import Loading from "../layout/Loading";
 import MoviesList from "../Lists/MoviesList";
 
-const MovieSearch = ({ navigation }) => {
+const SearchMovies = ({ navigation }) => {
   const [category, setCategory] = useState("now_playing");
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
@@ -13,7 +13,6 @@ const MovieSearch = ({ navigation }) => {
   const fetchMovies = async () => {
     setIsLoading(true);
     try {
-      // Trim leading and trailing spaces from category
       const trimmedCategory = category.trim();
       if (trimmedCategory !== "") {
         // Call getMoviesByQuery with trimmedCategory and endpoint "movie"
@@ -49,4 +48,4 @@ const MovieSearch = ({ navigation }) => {
   );
 };
 
-export default MovieSearch;
+export default SearchMovies;

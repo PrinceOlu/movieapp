@@ -1,13 +1,12 @@
-// MovieContainer.js
 import React, { useState, useEffect } from "react";
 import { Center } from "@gluestack-ui/themed";
-import MovieForm from "../forms/MovieForm";
-import { getMoviesByQuery } from "../../services/getMoviesByQuery";
+import TVsForm from "../forms/TVsForm";
+import { TVsquery } from "../../services/TVsquery";
 import Loading from "../layout/Loading";
 import MoviesList from "../Lists/MoviesList";
 
-const Movies = ({ navigation }) => {
-  const [category, setCategory] = useState("now_playing");
+const TVs = ({ navigation }) => {
+  const [category, setCategory] = useState("airing_today");
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
 
@@ -18,7 +17,7 @@ const Movies = ({ navigation }) => {
   const fetchMovies = async () => {
     setIsLoading(true);
     try {
-      const data = await getMoviesByQuery(category);
+      const data = await TVsquery(category);
       setMovies(data.results);
     } catch (error) {
       console.error("Error fetching movies:", error);
@@ -30,13 +29,9 @@ const Movies = ({ navigation }) => {
     setCategory(selectedCategory);
   };
 
-  const handleSubmit = () => {
-    fetchMovies();
-  };
-
   return (
     <Center px={4}>
-      <MovieForm onValueChange={handleInputChange} />
+      <TVsForm onValueChange={handleInputChange} />
 
       {isLoading ? (
         <Loading />
@@ -47,4 +42,4 @@ const Movies = ({ navigation }) => {
   );
 };
 
-export default Movies;
+export default TVs;

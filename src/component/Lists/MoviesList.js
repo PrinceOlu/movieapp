@@ -12,6 +12,7 @@ const MoviesList = ({ navigation, movies }) => {
           title={item.title}
           image={item.poster_path}
           navigation={navigation}
+          movieId={item.id}
         />
       )}
     />

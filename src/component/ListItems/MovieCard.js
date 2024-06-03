@@ -1,7 +1,11 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Button } from "react-native";
 
-const MovieCard = ({ title, image }) => {
+const MovieCard = ({ title, image, navigation, movieId }) => {
+  const handleReadMore = () => {
+    navigation.navigate("MovieDetail", { movieId });
+  };
+
   return (
     <View style={styles.card}>
       <Image
@@ -9,6 +13,7 @@ const MovieCard = ({ title, image }) => {
         style={styles.image}
       />
       <Text style={styles.title}>{title}</Text>
+      <Button title="Read More" onPress={handleReadMore} />
     </View>
   );
 };
