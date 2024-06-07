@@ -1,4 +1,3 @@
-// MovieContainer.js
 import React, { useState, useEffect } from "react";
 import { Center } from "@gluestack-ui/themed";
 import MovieForm from "../forms/MovieForm";

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "";
+const API_KEY = "cf7d025727bda336f48da271321bc19d";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 // Define the endpoints object

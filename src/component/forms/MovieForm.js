@@ -1,4 +1,3 @@
-// MovieForm.js
 import React, { useState } from "react";
 import { FormControl, VStack, Text } from "@gluestack-ui/themed";
 import { StyleSheet } from "react-native";

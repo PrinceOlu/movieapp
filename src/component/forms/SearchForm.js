@@ -12,7 +12,7 @@ import {
   SearchIcon,
   VStack,
 } from "@gluestack-ui/themed";
-import { StyleSheet, TextInput } from "react-native"; // Import TextInput from react-native
+import { StyleSheet, TextInput } from "react-native";
 
 const SearchForm = ({ onInputChange, onSubmit }) => {
   return (

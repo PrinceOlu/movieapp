@@ -17,7 +17,6 @@ const App = () => {
     <SafeAreaProvider>
       <GluestackUIProvider config={config}>
         <Header />
-        {/* <RecipyContainer /> */}
         <TabBarNavigation />
         <StatusBar bg="blue" />
       </GluestackUIProvider>
